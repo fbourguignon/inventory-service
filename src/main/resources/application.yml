@@ -1,0 +1,11 @@
+micronaut:
+  application:
+    name: inventoryService
+datasources:
+  default:
+    driverClassName: org.postgresql.Driver
+    db-type: postgres
+netty:
+  default:
+    allocator:
+      max-order: 3
