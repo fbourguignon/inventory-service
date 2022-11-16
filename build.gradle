@@ -20,7 +20,7 @@ dependencies {
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("org.postgresql:postgresql")
     implementation("io.micronaut:micronaut-validation")
-
+    implementation("net.sf.jasperreports:jasperreports:6.20.0")
 }
 
 
