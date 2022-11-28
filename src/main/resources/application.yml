@@ -5,7 +5,17 @@ datasources:
   default:
     driverClassName: org.postgresql.Driver
     db-type: postgres
+    url: ${JDBC_URL:`jdbc:postgresql://localhost:5432/postgres`}
+    username: ${JDBC_USER:postgres}
+    password: ${JDBC_PASSWORD:postgres}
+    schema-generate: none
+    dialect: POSTGRES
+jpa.default.properties.hibernate.hbm2ddl.auto: none
 netty:
   default:
     allocator:
       max-order: 3
+flyway:
+  datasources:
+    default:
+      enabled: true
