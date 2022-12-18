@@ -6,8 +6,6 @@ services:
       build:
         context: .
         dockerfile: ./Dockerfile
-      volumes:
-        - './logs:/logs'
       ports:
         - "8080:8080"
       restart: always
