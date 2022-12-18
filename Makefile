@@ -4,3 +4,9 @@ docker-up:
 docker-down:
 	docker-compose down
 
+build:
+	./gradlew build && cd ..
+
+start:
+	@make build
+	@make docker-up

@@ -1,12 +1,31 @@
 version: '3.7'
 
 services:
+  inventory-service:
+      image: inventory-service
+      build:
+        context: .
+        dockerfile: ./Dockerfile
+      volumes:
+        - './logs:/logs'
+      ports:
+        - "8080:8080"
+      restart: always
+      environment:
+        JDBC_URL: jdbc:postgresql://db/postgres
+      networks:
+        - inventory_network
   db:
     image: postgres:latest
     ports:
       - "5432:5432"
     restart: always
     environment:
-      POSTGRES_DB: store
+      POSTGRES_DB: postgres
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
+    networks:
+      -  inventory_network
+networks:
+    inventory_network:
+      name:     inventory_network
