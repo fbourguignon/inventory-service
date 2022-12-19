@@ -1,24 +1,28 @@
-## Micronaut 3.7.3 Documentation
+# inventory-service
+Proof of concept using Micronaut and Jasper Reports
 
-- [User Guide](https://docs.micronaut.io/3.7.3/guide/index.html)
-- [API Reference](https://docs.micronaut.io/3.7.3/api/index.html)
-- [Configuration Reference](https://docs.micronaut.io/3.7.3/guide/configurationreference.html)
-- [Micronaut Guides](https://guides.micronaut.io/index.html)
----
-
-- [Shadow Gradle Plugin](https://plugins.gradle.org/plugin/com.github.johnrengelman.shadow)
-## Feature test-resources documentation
-
-- [Micronaut Test Resources documentation](https://micronaut-projects.github.io/micronaut-test-resources/latest/guide/)
+- [x] [Micronaut 3.7.3](https://micronaut.io/)
+- [x] [Micronaut Data](https://micronaut-projects.github.io/micronaut-data/latest/guide/)
+- [x] [Micronaut Test Resources](https://micronaut-projects.github.io/micronaut-test-resources/latest/guide/)
+- [x] [IReport 6.20](https://sourceforge.net/projects/jasperstudio/files/JaspersoftStudio-6.20.0/)
+- [x] Java 11
+- [x] Docker
+- [x] Postgres
 
 
-## Feature http-client documentation
+## Running the project
+This command starts all containers and builds the project.
+```console
+inventory-service % make start
+```
 
-- [Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#httpClient)
+## Generating report
+This sample request will return a PDF report with default products for testing.
 
+![picture](img/report.png)
 
-## Feature jdbc-hikari documentation
-
-- [Micronaut Hikari JDBC Connection Pool documentation](https://micronaut-projects.github.io/micronaut-sql/latest/guide/index.html#jdbc)
-
-
+```console
+curl --location --request GET 'http://localhost:8080/reports/inventory' \
+--header 'accept: application/json' \
+--header 'Content-Type: application/pdf'
+```
