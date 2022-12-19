@@ -5,6 +5,7 @@ Proof of concept using Micronaut and Jasper Reports
 - [x] [Micronaut Data](https://micronaut-projects.github.io/micronaut-data/latest/guide/)
 - [x] [Micronaut Test Resources](https://micronaut-projects.github.io/micronaut-test-resources/latest/guide/)
 - [x] [IReport 6.20](https://sourceforge.net/projects/jasperstudio/files/JaspersoftStudio-6.20.0/)
+- [x] [Micronaut Flyway](https://micronaut-projects.github.io/micronaut-flyway/latest/guide/)
 - [x] Java 11
 - [x] Docker
 - [x] Postgres
