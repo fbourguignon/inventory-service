@@ -1,0 +1,11 @@
+datasources:
+  default:
+    driverClassName: org.postgresql.Driver
+    db-type: postgres
+    schema-generate: none
+    dialect: POSTGRES
+jpa.default.properties.hibernate.hbm2ddl.auto: none
+flyway:
+  datasources:
+    default:
+      enabled: true
